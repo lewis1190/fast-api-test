@@ -1,7 +1,7 @@
 FROM python:3.12-slim
 WORKDIR /app
 RUN apt-get update && \
-    apt-get -y install curl \
+    apt-get install -y curl && \
     apt-get install -y awscli
 COPY . /app
 RUN pip install --no-cache-dir -r requirements.txt
